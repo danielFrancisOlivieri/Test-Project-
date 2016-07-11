@@ -2,329 +2,253 @@
 <html>
   <head>
     <link rel='stylesheet' href='style.css'/>
-
+   
   </head>
   <body>
-   <script> //javascript
-//with each run, outputs several different sentences that are unique in verbiage but not syntax
-//make a switch statement for different types of sentences
-//make a simile creator
-//make a fortune generator
+    <script>
+      //javascript
+      //with each run, outputs several different sentences that are unique in verbiage but not syntax
+      //make a switch statement for different types of sentences
+      //make a simile creator
+      //make a fortune generator
 
-var kanyeQuotes = [
-  
-  "I really appreciate the moments that I was able to win rap album of the year or whatever.",
-  "I am God's vessel. But my greatest pain in life is that I will never be able to see myself perform live.",
-  "I liberate minds with my music. That's more important than liberating a few people from apartheid or whatever.",
-  "I am Warhol. I am the No. 1 most impactful artist of our generation. I am Shakespeare in the flesh.",
-  "I think I do myself a disservice by comparing myself to Steve Jobs and Walt Disney and human beings that we've seen before. It should be more like Willy Wonka... and welcome to my chocolate factory.",
-  "They say you can rap about anything except for Jesus, that means guns, sex, lies, video tapes, but if I talk about God my record won't get played Huh?",
-  "I have decided in 2020 to run for president.",
-  "If I had been literate, I wouldn't have sold drugs.",
-  "The only way to reduce the number of nuclear weapons is to use them.",
-  "The haters can't hold me back",
-  "Today you are you! That is truer than true! There is no one alive who is you-er than you!",
-  "Fun is good.",
-  "You're never too old, too wacky, too wild, to pick up a book and read to a child.",
-  "Gratitude is a sickness suffered by dogs.",
-  "It's not for me. I tried human flesh and it's too salty for my taste.",
-  "There's something about flying a kite at night that's so unwholesome.",
-  "Let them hate us so long as they fear us.",
-  "Between two evils, I always pick the one I never tried before.",
-  "It's not the men in your life that matters, it's the life in your men.",
-  "The art of living well and the art of dying well are one.",
-  "I am widely misunderstood. People do not realize that I an first and foremost a sexual being.",
-  "I hate nerds. Hate is actually an understatement. I despise them.  When I see some dork going on and on about orcs and dragons and shit I just want to swirly them until they drown.",
-  "Without a doubt, squirrel is the most underrated meat.",
-  "Somewhere deep down there's a decent man in me, he just can't be found.",
-  "The second time I went to jail, I was like, 'Okay, this is not the move.",
-  "The price good men pay for indifference to public affairs is to be ruled by evil men.",
-  "If the ride is more fly, then you must buy.",
-  "Britney would make a better prostitute than Christina. She's thicker.",
-  "People like me don't come from films. Them films come from people like me.",
-  "Yeah, I love being famous. It's almost like being white, y'know?",
-  "“بعضهم يقول إن الحياة قصيرة، وأنك قد تموت في حادث سيارة في أي لحظة، فعليك أن تعيش كل يوم كأنه آخر أيامك. هذا هراء. الحيـاة طويلة. ومن المحتمل جداً أنك لا تموت في حادث سيارة، وعندها عليك أن تعيش مع نتائج خياراتك لمدة خمسين عاماً” "
-  ];
+      var quotes = [
+
+        "I really appreciate the moments that I was able to win rap album of the year or whatever.",
+        "I am God's vessel. But my greatest pain in life is that I will never be able to see myself perform live.",
+        "I liberate minds with my music. That's more important than liberating a few people from apartheid or whatever.",
+        "I am Warhol. I am the No. 1 most impactful artist of our generation. I am Shakespeare in the flesh.",
+        "I think I do myself a disservice by comparing myself to Steve Jobs and Walt Disney and human beings that we've seen before. It should be more like Willy Wonka... and welcome to my chocolate factory.",
+        "They say you can rap about anything except for Jesus, that means guns, sex, lies, video tapes, but if I talk about God my record won't get played Huh?",
+        "I have decided in 2020 to run for president.",
+        "If I had been literate, I wouldn't have sold drugs.",
+        "The only way to reduce the number of nuclear weapons is to use them.",
+        "The haters can't hold me back",
+        "Today you are you! That is truer than true! There is no one alive who is you-er than you!",
+        "Fun is good.",
+		"Why fit in when you were born to stand out?",
+        "You're never too old, too wacky, too wild, to pick up a book and read to a child.",
+        "Gratitude is a sickness suffered by dogs.",
+        "It's not for me. I tried human flesh and it's too salty for my taste.",
+        "There's something about flying a kite at night that's so unwholesome.",
+        "Let them hate us so long as they fear us.",
+        "Between two evils, I always pick the one I never tried before.",
+        "It's not the men in your life that matters, it's the life in your men.",
+        "Death does not concern us, because as long as we exist, death is not here. And when it does come, we no longer exist.",
+        "The art of living well and the art of dying well are one.",
+        "hink every group of black guys should have at least one white guy in it.",
+        "The price good men pay for indifference to public affairs is to be ruled by evil men.",
+        "Yeah, I love being famous. It's almost like being white, y'know?",
+        "“بعضهم يقول إن الحياة قصيرة، وأنك قد تموت في حادث سيارة في أي لحظة، فعليك أن تعيش كل يوم كأنه آخر أيامك. هذا هراء. الحيـاة طويلة. ومن المحتمل جداً أنك لا تموت في حادث سيارة، وعندها عليك أن تعيش مع نتائج خياراتك لمدة خمسين عاماً” "
+      ];
 
 
-var famousPeople = [
-  "Mark Twain",
-  "Ernest Hemignway",
-  "Helen Keller",
-  "Bill Clinton",
-  "Noam Chompsky",
-  "Joseph Stalin",
-  "Ellen Degeneres",
-  "Helena Bonham Carter",
-  "Hillary Rodham Clinton",
-  "Donald J. Trump",
-  "Meryl Streep",
-  "Audrey Hepburn",
-  "Oprah Winfrey",
-  "Queen Elizabeth (both I and II said it)",
-  "Joseph Goebbels",
-  "Abraham Lincoln",
-  "Snooki",
-  "Aaron Burr",
-  "Ghenghis Khan",
-  "Mae West",
-  "George RR Martin",
-  "You, probably",
-  "Barrack Obama",
-  "Michelle Bachmann"
+      var famousPeople = [
+        "Mark Twain",
+        "Ernest Hemignway",
+        "Helen Keller",
+        "Noam Chompsky",
+        "Joseph Stalin",
+        "Ellen Degeneres",
+        "Helena Bonham Carter",
+        "Hillary Rodham Clinton",
+        "Donald J. Trump",
+        "Meryl Streep",
+        "Audrey Hepburn",
+        "Oprah Winfrey",
+        "Queen Elizabeth (both I and II said it)",
+        "Joseph Goebbels",
+        "Abraham Lincoln",
+        "Snooki",
+        "Aaron Burr",
+        "Ghenghis Khan",
+        "Mae West",
+        "George RR Martin",
+        "You, probably",
+        "Brad Pitt",
+        "Barrack Obama",
+        "Michelle Bachmann",
+        "Queen Latifah"
+      ];
+      var verbs = [
+        "flees",
+        "reels",
+        "does a backflip",
+        "really messed up this time",
+        "eats a bagel",
+        "enjoys eating",
+        "barks",
+        "has a problem",
+        "just got a masters degree in philosophy",
+        "owns a small rodent",
+        "enjoys eating eels",
+        "is carnivorous"
+      ];
 
-  ];
-var verbs = [
-  "flees",
-  "reels",
-  "does a backflip",
-  "really messed up this time",
-  "eats a bagel",
-  "enjoys eating",
-  "barks",
-  "has a problem",
-  "just got a masters degree in philosophy",
-  "owns a small rodent",
-  "enjoys eating eels",
-  "is carnivorous"
-];
+      var nouns = [
+        "literary critic",
+        "Canadian assassin",
+        "ostrich",
+        "dentist",
+        "oligarchy",
+        "Californian",
+        "kangaroo",
+        "camel enthusiast",
+        "puppet",
+        "stork",
+        "inmate",
+        "playwright",
+        "computer program",
+        "gardening accident",
+        "police officer",
+        "zookeeper",
+        "fourth-grader"
+      ];
 
-var nouns = [
-  "literary critic",
-  "Canadian assassin",
-  "ostrich",
-  "dentist",
-  "oligarchy",
-  "Californian",
-  "kangaroo",
-  "camel enthusiast",
-  "puppet",
-  "stork",
-  "mad scientist",
-  "playwright",
-  "mammal",
-  "computer program",
-  "gardening accident",
-  "police officer",
-  "zookeeper",
-  "fourth-grader"
-];
+      var adjectives = [
+        "bellicose",
+        "amateur",
+        "spurious",
+        "girthy",
+        "obese",
+        "aroused",
+        "lanky",
+        "fucked up",
+        "worthless",
+        "disgusting",
+        "callipygian",
+        "reptilian",
+        "Californian",
+        "macho",
+        "elequent",
+        "openely hostile",
+        "dangerous",
+        "about to lose their virginity",
+        "terrified",
+        "barely literate",
+        "gargantuan"
 
-var adjectives = [
-  "bellicose",
-  "amateur",
-  "spurious",
-  "callipygian",
-  "reptilian",
-  "Californian",
-  "macho",
-  "elequent",
-  "openely hostile",
-  "dangerous",
-  "archaic",
-  "terrified",
-  "barely literate",
-  "gargantuan"
+      ];
 
-];
+      function shuffle (verbs) {
+        var currentIndex = verbs.length, temporaryValue, randomIndex;
 
-function shuffle (verbs) {
-  var currentIndex = verbs.length, temporaryValue, randomIndex;
+        // While there remain elements to shuffle...
+        while (0 !== currentIndex) {
 
-  // While there remain elements to shuffle...
-  while (0 !== currentIndex) {
+          // Pick a remaining element...
+          randomIndex = Math.floor(Math.random() * currentIndex);
+          currentIndex -= 1;
 
-    // Pick a remaining element...
-    randomIndex = Math.floor(Math.random() * currentIndex);
-    currentIndex -= 1;
+          // And swap it with the current element.
+          temporaryValue = verbs[currentIndex];
+          verbs[currentIndex] = verbs[randomIndex];
+          verbs[randomIndex] = temporaryValue;
+        }
 
-    // And swap it with the current element.
-    temporaryValue = verbs[currentIndex];
-    verbs[currentIndex] = verbs[randomIndex];
-    verbs[randomIndex] = temporaryValue;
-  }
+      }
+      function anOrA(word) {
+        var firstLetter = word.charAt(0);
+        var anOrAVar = "a";
+        if ((firstLetter == "a") || (firstLetter == "i") || (firstLetter == "o") || (firstLetter == "e") || (firstLetter == "u") || (firstLetter == "y")) 
+        {
+          anOrAVar = "an";
+        }
+        return anOrAVar;
+      }
 
-}
-function anOrA(word) {
-  var firstLetter = word.charAt(0);
-  var anOrAVar = "a";
-  if ((firstLetter == "a") || (firstLetter == "i") || (firstLetter == "o") || (firstLetter == "e") || (firstLetter == "u") || (firstLetter == "y")) 
-  {
-    anOrAVar = "an";
-  }
-  return anOrAVar;
-}
+      function capitalizeFirstLetter(string) {
+        return string.charAt(0).toUpperCase() + string.slice(1);
+      }
 
-function writeSimile() {
-  shuffleAll();
-  var adjective = adjectives[0];
-  var noun = nouns[0];
-  var verb = verbs[0];
-  var indefiniteArt = anOrA(adjectives[1]);
-  var stringToOutput = "The " + adjective + " " + noun + " " + verb + ".";
-  var simile = "As " + adjective + " as " + indefiniteArt + " " + adjectives[1] + " " + noun + " ";
-  //console.log(simile);
-  return simile;
-}
-function writeSentence() {
-  shuffleAll();
-  var adjective = adjectives[0];
-  var noun = nouns[0];
-  var verb = verbs[0];
-  var indefiniteArt = anOrA(adjectives[1]);
-  var stringToOutput = "The " + adjective + " " + noun + " " + verb + ".";
+      function writeSimile() {
+        shuffleAll();
+        var adjective = adjectives[0];
+        var noun = nouns[0];
+        var verb = verbs[0];
+        var indefiniteArt1 = anOrA(adjectives[1]);
+        var indefiniteArt2 = anOrA(nouns[0]);
+        indefiniteArt2 = capitalizeFirstLetter(indefiniteArt2);
+        var indefiniteArt3 = anOrA(nouns[1]);
+        var simile = "Like a gremlin in a smurf factory";
+        var numb = Math.floor((Math.random() * 10) + 1);
+        if (numb >5 ){
+          simile = "As " + adjective + " as " + indefiniteArt1 + " " + adjectives[1] + " " + noun + " ";
+        }
+        else {
 
-  console.log(stringToOutput);
-  return stringToOutput;
+          simile = indefiniteArt2 + " " + nouns[0] + " is like " + indefiniteArt3 + " " + nouns[1] + ": they're both " + adjective + ".";
+        }
 
-}
+        //console.log(simile);
+        return simile;
+      }
+      function writeSentence() {
+        shuffleAll();
+        var adjective = adjectives[0];
+        var noun = nouns[0];
+        var verb = verbs[0];
+        var indefiniteArt = anOrA(adjectives[1]);
+        var stringToOutput = "The " + adjective + " " + noun + " " + verb + ".";
 
-function writeSentence2 () {
-  shuffleAll();
-  var adjective = adjectives[0];
-  var noun = nouns[0];
-  var verb = verbs[0];
-  var simile = writeSimile();
-  var string = " Because of this, the town's " + noun + " was" + simile + "all day.";
-  console.log(string);
-  return string;
-}
+        console.log(stringToOutput);
+        return stringToOutput;
 
-function shuffleAll () {
-  shuffle(verbs);
-  shuffle(adjectives);
-  shuffle(nouns);
-  shuffle(famousPeople);
-  shuffle(kanyeQuotes);
-}
+      }
 
-function quoteSpeaker () {
- shuffleAll();
-  var speaker = "- " + famousPeople[0];
-  return speaker;
-}
-function quoteGenerator () {
- shuffleAll();
-  var quote = kanyeQuotes[0];
-  return quote;
-}
+      function writeSentence2 () {
+        shuffleAll();
+        var adjective = adjectives[0];
+        var noun = nouns[0];
+        var verb = verbs[0];
+        var simile = writeSimile();
+        var string = " Because of this, the town's " + noun + " was" + simile + "all day.";
+        console.log(string);
+        return string;
+      }
 
- </script>
-    <h1 id="header" > 100% Accurate Quotes </h1>
+      function shuffleAll () {
+        shuffle(verbs);
+        shuffle(adjectives);
+        shuffle(nouns);
+        shuffle(famousPeople);
+        shuffle(quotes);
+      }
 
+      function quoteSpeaker () {
+        shuffleAll();
+        var speaker = "- " + famousPeople[0];
+        return speaker;
+      }
+      function quoteGenerator () {
+        shuffleAll();
+        var quote = quotes[0];
+        return quote;
+      }
+
+
+    </script>
+    <h1 id="header" > Here, Have a Sentence </h1>
     <div >
-      <p id="mainText" > Clothes make the man. Naked people have little or no influence on society. </p>
+      <p id="mainText" onclick="myFunction()" >
+        The barely literate computer programmer enjoys eating. </p>
     </div>
 
     <script>
       function myFunction() {
-        var jsText = quoteGenerator();
+        var jsText = writeSentence();
         document.getElementById("mainText").innerHTML = jsText;
-        var speaker = quoteSpeaker();
-        document.getElementById("citation").innerHTML = speaker;
-
+      
       }
     </script>
-    <style>
-	
-body {
-  background-image: url("http://wallpoper.com/images/00/30/36/06/keyboards-numbers_00303606.jpg");
-
-}
-
-#mainText {
-  color: #ffffff;
-  font-size: 47px;
-  text-align: center;
-  color: black;
-  -webkit-text-fill-color: white; /* Will override color (regardless of order) */
-  -webkit-text-stroke-width: 1.7px;
-  -webkit-text-stroke-color: black;
-  font-family: serif;
-}
-
-#txtA1 {
- // text-align: left;
-  width: 180px;
-  height: 160px;
-border: 3px solid #336cce;
-  padding: 5px;
-  font-size: 12px;
-  font-family:  sans-serif;
-  background-color: #B00B1E;
-  background-position: bottom right;
-  background-repeat: no-repeat;
-  margin-top: 10px;
-  //color: #336cce;
-}
-
-#header {
- text-align: center;
-  margin-top: 320px;
-  color: #B00B1E;
-  font-size: 47px;
-  text-align: center;
-  //color: black;
-  //-webkit-text-fill-color: white; /* Will override color (regardless of order) */
-  -webkit-text-stroke-width: 1.7px;
-  -webkit-text-stroke-color: black;
-  font-family: serif;
-}
-
-#postTxt {
-text-align: center;
-  color: #ffffff;
-margin-bottom: 3px;
-  -webkit-text-stroke-width: 1.7px;
-  -webkit-text-stroke-color: black;
-  
-}
-
-.button {
-  
-  text-align:center;
-  position:relative;
-  border-radius: 23%;
-  font-size:2em;
- border-width: medium;
-  border-color: #c73915;
-  width: 160px;
-  height: 100px;
-  display: inline;
-margin-top: 20px;
-  background-color: #336cce;
-  padding: 15px 32px;
-  color: #B00B1E;
-}
-
-.btnDiv{
- text-align: center;
-  margin: 70px;
-}
-
-#citation {
-  color: #B00B1E;
-  float: right;
-  font-size: 26px;
-  margin-right: 400px;
-  display: inline-block;
-  -webkit-text-stroke-width: 1.7px;
-  -webkit-text-stroke-color: black;
-}
-
-
-	</style>
-	
-    <h3 id ="citation">
-      - Mark Twain
-    </h3>
-    <br>
-
+    
     <div class="btnDiv">
       <button class="button" onclick="myFunction()"><span style="cursor:pointer">More </span></button>
     </div>
-   
-
-
-  </body>
-</html>
+    
+    <h3 id ="postTxt">
+    
+    </h3>
+    
+      </body>
+      </html>
