@@ -174,6 +174,17 @@ function writeSimile() {
   //console.log(simile);
   return simile;
 }
+
+//Love as if you would one day hate,
+//and hate as if you would one day love
+function writeChiasmus() {
+  shuffleAll();
+  
+  var chiasmus1 = "The " + nouns[0] + " is " + adjectives[0] + ", but " + adjectives[0] + " isn't " + "the " + nouns[0] + ".";
+  var chiasmus2 = verbs[0] + " as if you would one day " + verbs[1] + " and " + verbs[1] + " as if you would one day " + verbs[0] + ".";
+    return chiasmus2;
+}
+
 function writeSentence() {
   shuffleAll();
   var adjective = adjectives[0];
@@ -217,3 +228,5 @@ function quoteGenerator () {
   return quote;
 }
 
+var chiasmus = writeChiasmus();
+console.log(chiasmus);
