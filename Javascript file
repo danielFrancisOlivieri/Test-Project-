@@ -1,0 +1,219 @@
+//javascript
+//with each run, outputs several different sentences that are unique in verbiage but not syntax
+//make a switch statement for different types of sentences
+//make a simile creator
+//make a fortune generator
+
+var quotes = [
+
+  "I really appreciate the moments that I was able to win rap album of the year or whatever.",
+  "I am God's vessel. But my greatest pain in life is that I will never be able to see myself perform live.",
+  "I liberate minds with my music. That's more important than liberating a few people from apartheid or whatever.",
+  "I am Warhol. I am the No. 1 most impactful artist of our generation. I am Shakespeare in the flesh.",
+  "I think I do myself a disservice by comparing myself to Steve Jobs and Walt Disney and human beings that we've seen before. It should be more like Willy Wonka... and welcome to my chocolate factory.",
+  "They say you can rap about anything except for Jesus, that means guns, sex, lies, video tapes, but if I talk about God my record won't get played Huh?",
+  "I have decided in 2020 to run for president.",
+  "If I had been literate, I wouldn't have sold drugs.",
+  "The only way to reduce the number of nuclear weapons is to use them.",
+  "The haters can't hold me back",
+  "Today you are you! That is truer than true! There is no one alive who is you-er than you!",
+  "Fun is good.",
+  "You're never too old, too wacky, too wild, to pick up a book and read to a child.",
+  "Gratitude is a sickness suffered by dogs.",
+  "It's not for me. I tried human flesh and it's too salty for my taste.",
+  "There's something about flying a kite at night that's so unwholesome.",
+  "Let them hate us so long as they fear us.",
+  "Between two evils, I always pick the one I never tried before.",
+  "It's not the men in your life that matters, it's the life in your men.",
+  "Death does not concern us, because as long as we exist, death is not here. And when it does come, we no longer exist.",
+  "The art of living well and the art of dying well are one.",
+  "hink every group of black guys should have at least one white guy in it.",
+  "The price good men pay for indifference to public affairs is to be ruled by evil men.",
+  "Yeah, I love being famous. It's almost like being white, y'know?",
+  "“بعضهم يقول إن الحياة قصيرة، وأنك قد تموت في حادث سيارة في أي لحظة، فعليك أن تعيش كل يوم كأنه آخر أيامك. هذا هراء. الحيـاة طويلة. ومن المحتمل جداً أنك لا تموت في حادث سيارة، وعندها عليك أن تعيش مع نتائج خياراتك لمدة خمسين عاماً” "
+];
+
+
+var famousPeople = [
+  "Mark Twain",
+  "Ernest Hemignway",
+  "Helen Keller",
+  "Noam Chompsky",
+  "Joseph Stalin",
+  "Ellen Degeneres",
+  "Helena Bonham Carter",
+  "Hillary Rodham Clinton",
+  "Donald J. Trump",
+  "Meryl Streep",
+  "Audrey Hepburn",
+  "Oprah Winfrey",
+  "Queen Elizabeth (both I and II said it)",
+  "Joseph Goebbels",
+  "Abraham Lincoln",
+  "Snooki",
+  "Aaron Burr",
+  "Ghenghis Khan",
+  "Mae West",
+  "George RR Martin",
+  "You, probably",
+  "Brad Pitt",
+  "Barrack Obama",
+  "Michelle Bachmann",
+  "Queen Latifah"
+];
+var verbs = [
+  "flees",
+  "reels",
+  "does a backflip",
+  "really messed up this time",
+  "eats a bagel",
+  "enjoys eating",
+  "barks",
+  "has a problem",
+  "just got a masters degree in philosophy",
+  "owns a small rodent",
+  "enjoys eating eels",
+  "is carnivorous"
+];
+
+var nouns = [
+  "literary critic",
+  "Canadian assassin",
+  "ostrich",
+  "dentist",
+  "oligarchy",
+  "Californian",
+  "kangaroo",
+  "camel enthusiast",
+  "puppet",
+  "stork",
+  "inmate",
+  "playwright",
+  "computer program",
+  "gardening accident",
+  "police officer",
+  "zookeeper",
+  "fourth-grader"
+];
+
+var adjectives = [
+  "bellicose",
+  "amateur",
+  "spurious",
+  "girthy",
+  "obese",
+  "aroused",
+  "lanky",
+  "fucked up",
+  "worthless",
+  "disgusting",
+  "callipygian",
+  "reptilian",
+  "Californian",
+  "macho",
+  "elequent",
+  "openely hostile",
+  "dangerous",
+  "about to lose their virginity",
+  "terrified",
+  "barely literate",
+  "gargantuan"
+
+];
+
+function shuffle (verbs) {
+  var currentIndex = verbs.length, temporaryValue, randomIndex;
+
+  // While there remain elements to shuffle...
+  while (0 !== currentIndex) {
+
+    // Pick a remaining element...
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+
+    // And swap it with the current element.
+    temporaryValue = verbs[currentIndex];
+    verbs[currentIndex] = verbs[randomIndex];
+    verbs[randomIndex] = temporaryValue;
+  }
+
+}
+function anOrA(word) {
+  var firstLetter = word.charAt(0);
+  var anOrAVar = "a";
+  if ((firstLetter == "a") || (firstLetter == "i") || (firstLetter == "o") || (firstLetter == "e") || (firstLetter == "u") || (firstLetter == "y")) 
+  {
+    anOrAVar = "an";
+  }
+  return anOrAVar;
+}
+
+function capitalizeFirstLetter(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
+function writeSimile() {
+  shuffleAll();
+  var adjective = adjectives[0];
+  var noun = nouns[0];
+  var verb = verbs[0];
+  var indefiniteArt1 = anOrA(adjectives[1]);
+  var indefiniteArt2 = anOrA(nouns[0]);
+  indefiniteArt2 = capitalizeFirstLetter(indefiniteArt2);
+  var indefiniteArt3 = anOrA(nouns[1]);
+  var simile = "Like a gremlin in a smurf factory";
+  var numb = Math.floor((Math.random() * 10) + 1);
+  if (numb >5 ){
+    simile = "As " + adjective + " as " + indefiniteArt1 + " " + adjectives[1] + " " + noun + " ";
+  }
+  else {
+
+    simile = indefiniteArt2 + " " + nouns[0] + " is like " + indefiniteArt3 + " " + nouns[1] + ": they're both " + adjective + ".";
+  }
+
+  //console.log(simile);
+  return simile;
+}
+function writeSentence() {
+  shuffleAll();
+  var adjective = adjectives[0];
+  var noun = nouns[0];
+  var verb = verbs[0];
+  var indefiniteArt = anOrA(adjectives[1]);
+  var stringToOutput = "The " + adjective + " " + noun + " " + verb + ".";
+
+  console.log(stringToOutput);
+  return stringToOutput;
+
+}
+
+function writeSentence2 () {
+  shuffleAll();
+  var adjective = adjectives[0];
+  var noun = nouns[0];
+  var verb = verbs[0];
+  var simile = writeSimile();
+  var string = " Because of this, the town's " + noun + " was" + simile + "all day.";
+  console.log(string);
+  return string;
+}
+
+function shuffleAll () {
+  shuffle(verbs);
+  shuffle(adjectives);
+  shuffle(nouns);
+  shuffle(famousPeople);
+  shuffle(quotes);
+}
+
+function quoteSpeaker () {
+  shuffleAll();
+  var speaker = "- " + famousPeople[0];
+  return speaker;
+}
+function quoteGenerator () {
+  shuffleAll();
+  var quote = quotes[0];
+  return quote;
+}
+
